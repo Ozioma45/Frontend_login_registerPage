@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone:"", password: "" });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,6 +18,7 @@ const Register = () => {
       const { data } = await api.post("/register", {
         name: form.name,
         email: form.email,
+        phone: form.phone,
         password: form.password,
       });
       alert("Registered successfully!");
@@ -48,6 +49,14 @@ const Register = () => {
           name="email"
           placeholder="Email"
           value={form.email}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <input
+          name="phone"
+          placeholder="Phone"
+          value={form.phone}
           onChange={handleChange}
           required
         />
