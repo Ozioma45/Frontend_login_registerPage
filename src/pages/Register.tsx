@@ -76,7 +76,7 @@ const Register = () => {
       </form>
 
       <br />
-      <a href="http://localhost:5000/auth/google">
+      <a href="https://urgent-2kay-directed-bill-payment-system.onrender.com/auth/auth/google">
         <button>Register with Google</button>
       </a>
     </div>
