@@ -1,11 +1,12 @@
-// src/App.tsx
+import { Link } from 'react-router-dom';
+
 function App() {
   return (
     <div>
       <h1>Welcome</h1>
       <p>This is the homepage.</p>
       <p>
-        <a href="/login">Login</a> or <a href="/register">Register</a>
+        <Link to="/login">Login</Link> or <Link to="/register">Register</Link>
       </p>
     </div>
   );
